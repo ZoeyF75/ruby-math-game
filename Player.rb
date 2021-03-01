@@ -1,9 +1,7 @@
 class Player
+  attr_accessor :lives
   def initialize(isP1)
-    puts "Welcome"
     lives = 3
+    isP1 ? player1 = P1.new : player2 = P2.new
   end
-  #start game loop here
-  #isP1 ? create P1 : create P2
-  #set current player here
 end
