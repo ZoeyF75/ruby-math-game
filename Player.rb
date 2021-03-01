@@ -1,7 +1,7 @@
 class Player
-  attr_accessor :lives
+  attr_accessor :lives, :name
   def initialize(isP1)
-    lives = 3
-    isP1 ? player1 = P1.new : player2 = P2.new
+    @lives = 3
+    isP1 ? @name = "player1" : @name = "player2"
   end
 end

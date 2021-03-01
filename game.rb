@@ -1,29 +1,21 @@
 require "./Player"
 
-class Game
-  attr_accessor :players
+class Game 
+  attr_reader :p1, :p2, :currentPlayer, :currentOpposer 
   def initialize
     @p1 = Player.new(true)
     @p2 = Player.new(false)
-    @players = [@p1,@p2]
-    @current_player = @p1
-  end
-
-  def question
-    num1 = rand(1...30)
-    num2 = rand(1...30)
-    bool = rand(1...3)
-    if bool === 1 
-      sign - "+"
-      correctAnswer = num1 + num2
-    else
-      correctAnswer = num1 - num2
-    end
-    #current_player: What is ${num1} ${sign} ${num2}?
+    @currentPlayer = @p1
+    @currentOpposer = @p2
   end
 
   def current_player
-
+    if self.currentPlayer === @p1 
+          self.currentPlayer === self.p2 
+          self.currentOpposer === self.p1
+    else
+       self.currentPlayer === self.p1
+       self.currentOpposer === self.p2
+    end
   end
-
 end
