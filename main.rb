@@ -20,13 +20,17 @@ while currentGame.p1.lives  > 0 && currentGame.p2.lives > 0 do
      currentGame.currentPlayer.lives -= 1
      puts "Womp, womp, womp...incorrect."
   end
-  puts "#{player}: #{currentGame.currentPlayer.lives}/3 vs #{opposer}: #{currentGame.currentOpposer.lives}/3\n
-  ----- NEW TURN -----"
-  currentGame.current_player
+
   if currentGame.currentPlayer.lives === 0 
     puts "#{opposer} wins with a score of #{currentGame.currentOpposer.lives}/3\n
     ----- GAME OVER -----\n
     Good bye!"
+    break
   end
+  
+  puts "#{player}: #{currentGame.currentPlayer.lives}/3 vs #{opposer}: #{currentGame.currentOpposer.lives}/3\n
+  ----- NEW TURN -----"
+
+  currentGame.current_player
 end
     

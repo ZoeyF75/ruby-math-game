@@ -10,12 +10,12 @@ class Game
   end
 
   def current_player
-    if self.currentPlayer === @p1 
-          self.currentPlayer === self.p2 
-          self.currentOpposer === self.p1
+    if @currentPlayer == @p1 
+          @currentPlayer = @p2
+          @currentOpposer = @p1
     else
-       self.currentPlayer === self.p1
-       self.currentOpposer === self.p2
+       @currentPlayer = p1
+       @currentOpposer = p2
     end
   end
 end
