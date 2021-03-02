@@ -1,6 +1,4 @@
 require "./Player"
-require "./P1"
-require "./P2"
 require "./Game"
 require "./Question"
 
